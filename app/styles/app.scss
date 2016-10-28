@@ -1,4 +1,4 @@
-$scheme: bus; //Change value to change color scheme
+$scheme: tesla; //Change value to change color scheme
 
 $schemecolor1: map-get((
     tesla : #586A6A,
@@ -55,6 +55,8 @@ body {
 }
 
 .tiles {
+  color: black;
+
   position: relative;
   margin-bottom: 10px;
   width: 100%;
@@ -67,7 +69,7 @@ body {
 .questions:hover {
   border: inset 3px $schemecolor3;
   background-color: darken($fifthcolorDarkend, 3%);
-
+  text-decoration-color: black; 
 }
 
 .asked-by {
@@ -146,4 +148,12 @@ button {
 
 button:active {
   background-color: lighten($schemecolor1,4%);
+}
+
+.top-bar {
+  background-color: lighten($schemecolor1,25%);
+  .nav-text {
+    color: white;
+  }
+  border: outset 2px lighten($schemecolor1,25%);
 }
