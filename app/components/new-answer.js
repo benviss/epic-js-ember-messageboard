@@ -5,7 +5,7 @@ export default Ember.Component.extend({
      saveAnswer() {
       var params = {
         author: this.get('author'),
-        answer: this.get('answer'),
+        content: this.get('content'),
         date: this.get('date'),
         question: this.get('question')
       };
