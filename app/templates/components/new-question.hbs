@@ -1,21 +1,26 @@
-{{#if newQuestionForm}}
-<div>
-  <form  {{action 'saveQuestion' on="submit"}}>
-    <div class="form-group">
-      <label for="title">Question</label>
-      {{input value=title id="title" required=true}}
-    </div>
-    <div class="form-group">
-      <label for="author">Author</label>
-      {{input value=author id="author" required=true}}
-    </div>
-    <div class="form-group">
-      <label for="content">Content</label>
-      {{textarea value=content id="content" required=true}}
-    </div>
-    <button type="submit">Save</button>
-  </form>
+<div class="new-question-form">
+  {{#if newQuestionForm}}
+  <div>
+    <form  {{action 'saveQuestion' on="submit"}}>
+      <div class="form-group">
+        <label for="title">Question</label>
+        {{input value=title id="title" required=true}}
+      </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        {{input value=author id="author" required=true}}
+      </div>
+      <div class="form-group">
+        <label for="content">Content</label>
+        {{textarea value=content id="content" required=true}}
+      </div>
+      <button type="submit">Save</button>
+    </form>
+  </div>
+  {{else}}
+  <div class="new-question-button">
+    <button {{action 'newQuestionForm'}}>Ask a Question!</button>
+  </div>
+  {{/if}}
+
 </div>
-{{else}}
-<button {{action 'newQuestionForm'}}>Ask a Question!</button>
-{{/if}}

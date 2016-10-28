@@ -1,5 +1,69 @@
+
 $primarycolor: #5d91a1;
 $secondarycolor: #86d3e3;
-$third: #a2ffe1;
+$thirdcolor: #a2ffe1;
 $fourthcolor: #e2ffcf;
 $fifthcolor: #feffe6;
+$fifthcolorDarkend: darken(#feffe6,3%);
+$test: linear-gradient(to right, $primarycolor, $thirdcolor, $primarycolor);
+
+body {
+    height: 55px;
+    background: linear-gradient(to right, $primarycolor, $thirdcolor, $primarycolor);
+}
+
+.jumbotron {
+  background: linear-gradient(0deg, $thirdcolor, $secondarycolor);
+  border: outset 5px $thirdcolor;
+  border-radius: 25px;
+}
+
+.question-list {
+  position: relative;
+  padding: 15px;
+  border: inset 5px $fifthcolor;
+  background-color: $fifthcolor;
+  min-height: 500px;
+  border-bottom: inset 5px darken($fifthcolor, 5%);
+  border-right: inset 5px darken($fifthcolor, 5%);
+}
+
+.question-tile {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 20px;
+  background-color: $fifthcolorDarkend;
+  border: outset 3px $thirdcolor;
+  border-radius: 5px;
+}
+
+.question-tile:hover {
+  border: inset 3px $thirdcolor;
+  background-color: darken($fifthcolorDarkend, 3%);
+
+}
+
+.asked-by {
+  position: absolute;
+  right: 0;
+  margin-right: 5%;
+  text-decoration: underline;
+}
+
+.scrollable {
+  overflow-y: auto;
+  height: 500px;
+}
+
+.new-question-form {
+  border: inset 2px $primarycolor;
+  text-align: center;
+  label {
+    padding-right: 10px;
+  }
+}
+
+.new-question-button {
+  text-align: center;
+  bottom: 0;
+}

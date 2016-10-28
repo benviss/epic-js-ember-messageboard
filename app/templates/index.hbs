@@ -1,6 +1,9 @@
-{{new-question saveQuestion='saveQuestion'}}
 
-
-{{#each model as |question|}}
-{{question-tile question=question}}
-{{/each}}
+<div class="question-list scrollable">
+  {{#each model as |question|}}
+    {{#link-to 'question' question.id}}
+      {{question-tile question=question}}
+    {{/link-to}}
+  {{/each}}
+  {{new-question saveQuestion='saveQuestion'}}
+</div>
