@@ -1,0 +1,9 @@
+{{new-question saveQuestion='saveQuestion'}}
+
+
+{{#each model as |question|}}
+{{question.title}}
+{{question.author}}
+{{question.content}}
+{{question.date}}
+{{/each}}

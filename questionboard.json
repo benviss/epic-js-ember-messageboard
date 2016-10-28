@@ -1,0 +1,12 @@
+{ "questions": [{
+    "title": "What... is the air-speed velocity of an unladen swallow?",
+    "author": "Man on Bridge",
+    "content": "Content of question, perhaps explanations",
+    "date": "Two seconds ago...."
+  }],
+"answers": [{
+    "author": "King Arthur",
+    "content": "What do you mean? An African or European swallow?",
+    "date": "One second ago...."
+  }]
+}
