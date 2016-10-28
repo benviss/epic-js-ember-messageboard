@@ -8,5 +8,5 @@
 {{update-question question=model update='update' destroyQuestion='destroyQuestion'}}
 {{new-answer question=model saveAnswer='saveAnswer'}}
 {{#each model.answers as |answer|}}
-  {{answer-tile answer=answer destroyAnswer='destroyAnswer' updateAnswer='updateAnswer'}}
+  {{answer-tile answer=answer destroyAnswer='destroyAnswer' updateAnswer='updateAnswer' vote='vote'}}
 {{/each}}
