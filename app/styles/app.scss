@@ -5,30 +5,45 @@ $schemecolor1: map-get((
     van : #5D5F71,
     bus : #8D818C,
     car : #5d91a1,
+    bike : #23231A,
+    skates : #2E3532,
+    feet : #2A0800,
 ), $scheme);
 $schemecolor2: map-get((
     tesla : #B9A394,
     van : #E3D8F1,
     bus : #B4B8C5,
     car : #86d3e3,
+    bike : #322F20,
+    skates : #7E9181,
+    feet : #BEA8A7,
 ), $scheme);
 $schemecolor3: map-get((
     tesla : #818D92,
     van : #DABECA,
     bus : #E9EBF8,
     car : #a2ffe1,
+    bike : #FE5F00,
+    skates : #94849B,
+    feet : #C09891,
 ), $scheme);
 $schemecolor4: map-get((
     tesla : #D4C5C7,
     van : #BF8B85,
     bus : #A5A299,
     car : #e2ffcf,
+    bike : #988F2A,
+    skates : #C7CEDB,
+    feet : #775144,
 ), $scheme);
 $schemecolor5: map-get((
     tesla : #A5A299,
     van : #AD8A64,
     bus : #FEFFFE,
     car : #feffe6,
+    bike : #6A5837,
+    skates : #A0AAB2,
+    feet : #F4DBD8,
 ), $scheme);
 
 $fifthcolorDarkend: darken($schemecolor5,3%);
@@ -69,7 +84,7 @@ body {
 .questions:hover {
   border: inset 3px $schemecolor3;
   background-color: darken($fifthcolorDarkend, 3%);
-  text-decoration-color: black; 
+  text-decoration-color: black;
 }
 
 .asked-by {
@@ -144,6 +159,7 @@ button {
   background-color: $schemecolor1;
   border: outset 2px $schemecolor1;
   border-radius: 2px;
+  color: black;
 }
 
 button:active {
