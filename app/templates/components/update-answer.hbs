@@ -12,6 +12,8 @@
       <button {{action 'updateAnswer' answer}}>Save</button>
     </form>
 {{else}}
-<button {{action 'updateAnswerForm'}}>Edit</button>
-<button {{action 'delete' answer}}>Delete</button>
+<div class="updates">
+  <button {{action 'updateAnswerForm'}}>Edit</button>
+  <button {{action 'delete' answer}}>Delete</button>
+</div>
 {{/if}}

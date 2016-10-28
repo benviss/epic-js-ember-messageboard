@@ -18,7 +18,7 @@ body {
   border-radius: 25px;
 }
 
-.question-list {
+.lists {
   position: relative;
   padding: 15px;
   border: inset 5px $fifthcolor;
@@ -28,7 +28,8 @@ body {
   border-right: inset 5px darken($fifthcolor, 5%);
 }
 
-.question-tile {
+.tiles {
+  position: relative;
   margin-bottom: 10px;
   width: 100%;
   padding: 20px;
@@ -37,7 +38,7 @@ body {
   border-radius: 5px;
 }
 
-.question-tile:hover {
+.questions:hover {
   border: inset 3px $thirdcolor;
   background-color: darken($fifthcolorDarkend, 3%);
 
@@ -63,7 +64,52 @@ body {
   }
 }
 
+.new-answer-form {
+  border: inset 2px $primarycolor;
+  text-align: center;
+  label {
+    padding-right: 10px;
+  }
+}
+
 .new-question-button {
   text-align: center;
   bottom: 0;
+}
+
+.question-intro {
+  position: relative;
+  padding: 15px;
+  border: inset 5px $fifthcolor;
+  background-color: $fifthcolor;
+  // border-bottom: inset 5px darken($fifthcolor, 5%);
+  // border-right: inset 5px darken($fifthcolor, 5%);
+  #question-author {
+    font-style: italic;
+  }
+}
+.title {
+  text-decoration: underline;
+}
+.content {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.updates {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.vote:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.voting {
+  text-align: center;
+  font-family: cursive;
+
+}
+.vote {
+  margin-bottom: 0;
 }

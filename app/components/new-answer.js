@@ -1,7 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  newAnswerForm: false,
   actions: {
+    newAnswerForm() {
+      this.set('newAnswerForm', true);
+    },
      saveAnswer() {
       var params = {
         author: this.get('author'),
@@ -9,6 +13,7 @@ export default Ember.Component.extend({
         votes: 0,
         question: this.get('question')
       };
+      this.set('newAnswerForm', false);
       this.sendAction('saveAnswer', params);
     }
    }

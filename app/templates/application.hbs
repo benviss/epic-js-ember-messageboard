@@ -1,10 +1,15 @@
 <div class= "container">
   <header class= "jumbotron">
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse top-bar">
       <div class="container-fluid">
         <div class="navbar-header">
           {{#link-to 'index' class="navbar-brand"}}Questions about...everything{{/link-to}}
         </div>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="nav navbar-nav">
+                {{#link-to 'index' tagName="li"}}<a href="">Home</a>{{/link-to}}
+          </ul>
+        </div><!-- /.navbar-collapse -->
       </div>
     </nav>
   </header>

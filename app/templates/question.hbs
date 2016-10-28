@@ -1,12 +1,16 @@
 <div class="question-intro">
-  {{model.title}}<br>
-  <span class="question-author">{{model.author}}</span>
+  <span class="title">{{model.title}}</span><br>
+  <div class="content">
+    {{model.content}}<br>
+    <span id="question-author">--{{model.author}}</span>
+  </div>
+  {{update-question question=model update='update' destroyQuestion='destroyQuestion'}}
 </div>
 <br>
 <hr>
-{{model.content}}
-{{update-question question=model update='update' destroyQuestion='destroyQuestion'}}
-{{new-answer question=model saveAnswer='saveAnswer'}}
-{{#each model.answers as |answer|}}
-  {{answer-tile answer=answer destroyAnswer='destroyAnswer' updateAnswer='updateAnswer' vote='vote'}}
-{{/each}}
+<div class="lists scrollable">
+  {{#each model.answers as |answer|}}
+    {{answer-tile answer=answer destroyAnswer='destroyAnswer' updateAnswer='updateAnswer' vote='vote'}}
+  {{/each}}
+  {{new-answer question=model saveAnswer='saveAnswer'}}
+</div>
