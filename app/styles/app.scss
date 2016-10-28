@@ -1,30 +1,57 @@
-$primarycolor: #5d91a1;
-$secondarycolor: #86d3e3;
-$thirdcolor: #a2ffe1;
-$fourthcolor: #e2ffcf;
-$fifthcolor: #feffe6;
-$fifthcolorDarkend: darken(#feffe6,3%);
-$test: linear-gradient(to right, $primarycolor, $thirdcolor, $primarycolor);
+$scheme: bus; //Change value to change color scheme
+
+$schemecolor1: map-get((
+    tesla : #586A6A,
+    van : #5D5F71,
+    bus : #8D818C,
+    car : #5d91a1,
+), $scheme);
+$schemecolor2: map-get((
+    tesla : #B9A394,
+    van : #E3D8F1,
+    bus : #B4B8C5,
+    car : #86d3e3,
+), $scheme);
+$schemecolor3: map-get((
+    tesla : #818D92,
+    van : #DABECA,
+    bus : #E9EBF8,
+    car : #a2ffe1,
+), $scheme);
+$schemecolor4: map-get((
+    tesla : #D4C5C7,
+    van : #BF8B85,
+    bus : #A5A299,
+    car : #e2ffcf,
+), $scheme);
+$schemecolor5: map-get((
+    tesla : #A5A299,
+    van : #AD8A64,
+    bus : #FEFFFE,
+    car : #feffe6,
+), $scheme);
+
+$fifthcolorDarkend: darken($schemecolor5,3%);
 
 body {
   height: 55px;
-  background: linear-gradient(to right, $primarycolor, $thirdcolor, $primarycolor);
+  background: linear-gradient(to right, $schemecolor1, $schemecolor3, $schemecolor1);
 }
 
 .jumbotron {
-  background: linear-gradient(0deg, $thirdcolor, $secondarycolor);
-  border: outset 5px $thirdcolor;
+  background: linear-gradient(0deg, $schemecolor3, $schemecolor2);
+  border: outset 5px $schemecolor3;
   border-radius: 25px;
 }
 
 .lists {
   position: relative;
   padding: 15px;
-  border: inset 5px $fifthcolor;
-  background-color: $fifthcolor;
+  border: inset 5px $schemecolor5;
+  background-color: $schemecolor5;
   min-height: 500px;
-  border-bottom: inset 5px darken($fifthcolor, 5%);
-  border-right: inset 5px darken($fifthcolor, 5%);
+  border-bottom: inset 5px darken($schemecolor5, 5%);
+  border-right: inset 5px darken($schemecolor5, 5%);
 }
 
 .tiles {
@@ -33,12 +60,12 @@ body {
   width: 100%;
   padding: 20px;
   background-color: $fifthcolorDarkend;
-  border: outset 3px $thirdcolor;
+  border: outset 3px $schemecolor3;
   border-radius: 5px;
 }
 
 .questions:hover {
-  border: inset 3px $thirdcolor;
+  border: inset 3px $schemecolor3;
   background-color: darken($fifthcolorDarkend, 3%);
 
 }
@@ -56,7 +83,7 @@ body {
 }
 
 .new-question-form {
-  border: inset 2px $primarycolor;
+  border: inset 2px $schemecolor1;
   text-align: center;
   label {
     padding-right: 10px;
@@ -64,7 +91,7 @@ body {
 }
 
 .new-answer-form {
-  border: inset 2px $primarycolor;
+  border: inset 2px $schemecolor1;
   text-align: center;
   label {
     padding-right: 10px;
@@ -79,8 +106,8 @@ body {
 .question-intro {
   position: relative;
   padding: 15px;
-  border: inset 5px $fifthcolor;
-  background-color: $fifthcolor;
+  border: inset 5px $schemecolor5;
+  background-color: $schemecolor5;
   #question-author {
     font-style: italic;
   }
@@ -109,4 +136,14 @@ body {
 }
 .vote {
   margin-bottom: 0;
+}
+
+button {
+  background-color: $schemecolor1;
+  border: outset 2px $schemecolor1;
+  border-radius: 2px;
+}
+
+button:active {
+  background-color: lighten($schemecolor1,4%);
 }
