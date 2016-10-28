@@ -1,0 +1,18 @@
+<h1>New Answer</h1>
+  <div class="new-answer">
+    <form {{action 'saveAnswer' on="submit"}}>
+      <div class="form-group">
+        <label for="author">Author</label>
+        {{input value=author id="author" required=true}}
+      </div>
+      <div class="form-group">
+        <label for="answer">Answer</label>
+        {{textarea class="answer-text" value=answer id="answer" required=true}}
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        {{input value=date id="date" required=true}}
+      </div>
+      <button type="submit">Save</button>
+    </form>
+  </div>

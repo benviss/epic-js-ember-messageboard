@@ -3,3 +3,9 @@
 <hr>
 {{model.content}}
 {{update-question question=model update='update' destroyQuestion='destroyQuestion'}}
+
+
+{{new-answer question=model saveAnswer='saveAnswer'}}
+{{#each model.answers as |answer|}}
+{{answer-tile answer=answer}}
+{{/each}}
