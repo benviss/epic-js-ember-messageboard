@@ -10,7 +10,10 @@ export default Ember.Component.extend({
           content: this.get('content'),
           date: this.get('date'),
         };
+        console.log('before component sendAction')
         this.sendAction('saveQuestion', params);
+        console.log('after component sendAction')
+
     },
   }
 });
