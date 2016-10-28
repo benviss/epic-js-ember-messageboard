@@ -4,33 +4,29 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.findRecord('question',params.question_id);
   },
-
   actions: {
     update(question, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
-        question.set(key,params[key]);
+          question.set(key,params[key]);
         }
       });
       question.save();
     },
-
     updateAnswer(answer, params) {
       var question = params.question;
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
-        answer.set(key,params[key]);
+          answer.set(key,params[key]);
         }
       });
       answer.save().then(function() {
         return question.save();
       });
     },
-
     vote(answer) {
       answer.save();
     },
-
     saveAnswer(params) {
       var newAnswer = this.store.createRecord('answer', params);
       var question = params.question;

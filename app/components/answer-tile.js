@@ -8,7 +8,6 @@ export default Ember.Component.extend({
     destroyAnswer(answer) {
       this.sendAction('destroyAnswer', answer);
     },
-
     upVote(answer) {
       var currentVotes = answer.get('votes');
       currentVotes += 1;
@@ -16,7 +15,6 @@ export default Ember.Component.extend({
       newAnswer.votes = currentVotes;
       this.sendAction('vote', newAnswer);
     },
-
     downVote(answer) {
       var currentVotes = answer.get('votes');
       currentVotes -= 1;

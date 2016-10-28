@@ -6,7 +6,7 @@ export default Ember.Component.extend({
     newAnswerForm() {
       this.set('newAnswerForm', true);
     },
-     saveAnswer() {
+    saveAnswer() {
       var params = {
         author: this.get('author'),
         content: this.get('content'),
@@ -16,6 +16,6 @@ export default Ember.Component.extend({
       this.set('newAnswerForm', false);
       this.sendAction('saveAnswer', params);
     }
-   }
+  }
 
 });

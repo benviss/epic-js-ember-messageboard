@@ -1,5 +1,5 @@
 <div class="new-answer-form">
-{{#if newAnswerForm}}
+  {{#if newAnswerForm}}
   <h1>New Answer</h1>
   <div class="new-answer">
     <form {{action 'saveAnswer' on="submit"}}>
@@ -14,9 +14,9 @@
       <button type="submit">Save</button>
     </form>
   </div>
-{{else}}
-<div class="new-answer-button">
-  <button {{action 'newAnswerForm'}}>Answer this Question!</button>
-</div>
-{{/if}}
+  {{else}}
+  <div class="new-answer-button">
+    <button {{action 'newAnswerForm'}}>Answer this Question!</button>
+  </div>
+  {{/if}}
 </div>
