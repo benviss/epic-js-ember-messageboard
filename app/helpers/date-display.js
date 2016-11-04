@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
 export function dateDisplay(params/*, hash*/) {
-  console.log(params.get('date'))
-  console.log(params[0].get('date'))
   if(params[0].get('date') === undefined) {
     return Ember.String.htmlSafe('<p>No date</p>');
   } else {

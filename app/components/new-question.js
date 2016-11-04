@@ -11,7 +11,8 @@ export default Ember.Component.extend({
         title: this.get('title'),
         author: this.get('author'),
         content: this.get('content'),
-        date: this.set('date', new Date())
+        date: this.set('date', new Date()),
+        answered: false,
       };
       this.set('newQuestionForm', false);
       this.sendAction('saveQuestion', params);

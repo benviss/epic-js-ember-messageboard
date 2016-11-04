@@ -1,0 +1,5 @@
+{{#each sortedQuestions as |question|}}
+  {{#link-to 'question' question.id}}
+    {{question-tile question=question}}
+  {{/link-to}}
+{{/each}}

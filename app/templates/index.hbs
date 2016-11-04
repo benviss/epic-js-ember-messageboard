@@ -1,9 +1,5 @@
 
 <div class="lists scrollable">
-  {{#each model as |question|}}
-    {{#link-to 'question' question.id}}
-      {{question-tile question=question}}
-    {{/link-to}}
-  {{/each}}
+  {{question-list questions=model}}
   {{new-question saveQuestion='saveQuestion'}}
 </div>

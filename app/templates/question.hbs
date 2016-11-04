@@ -3,13 +3,16 @@
   <div class="content">
     {{model.content}}<br>
     <span id="question-author">--{{model.author}}</span>
+    {{question-answered model}}
   </div>
+  {{#unless model.answered}}
+    <button class="question-solved" {{action 'questionAnswered' model}}>Mark as Solved</button>
+  {{/unless}}
   {{update-question question=model update='update' destroyQuestion='destroyQuestion'}}
 </div>
 <br>
 <hr>
 <div class="lists scrollable">
-
   {{answer-list answers = model.answers destroyAnswer='destroyAnswer' updateAnswer='updateAnswer' vote='vote'}}
   <!-- {{#each model.answers as |answer|}}
     {{answer-tile answer=answer destroyAnswer='destroyAnswer' updateAnswer='updateAnswer' vote='vote'}}
