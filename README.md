@@ -4,7 +4,7 @@ This website will allow users to ask questions to the general populace. Question
 
 ## Prerequisites
 
-You will need the following things properly installed on your computer.
+You will need the following things properly installed on your computer. Admin username is "Ben", Password is "Awesome"
 
 * [Git](http://git-scm.com/)
 * [Node.js](http://nodejs.org/) (with NPM)
@@ -25,8 +25,10 @@ You will need the following things properly installed on your computer.
 -users can answer questions and provide name: "A fruit", "Matt";
   -users can edit answers: "A fruit, idiot.";
   -users can vote up and vote down answers: "Matt answer voted down" Votes: -1;
--users can delete answers: "deleted";
--users can delete questions: "deleted";
+-users can mark a questions as answered: true; "Question has been solved"
+-user can log in as admin to gain admin features;
+  -admin can delete answers: "deleted";
+  -admin can delete questions: "deleted";
 
 ## Licensing
 
