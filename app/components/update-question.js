@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  adminControl: Ember.inject.service(),
   updateQuestionForm: false,
   actions: {
     updateQuestionForm() {

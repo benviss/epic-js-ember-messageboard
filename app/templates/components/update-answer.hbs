@@ -1,19 +1,21 @@
-{{#if updateAnswerForm}}
-  <h4>Update</h4>
-    <form>
-      <div class="form-group">
-        <label for="author">Author</label>
-        {{input id="author" value=answer.author}}
-      </div>
-      <div class="form-group">
-        <label for="content">Content</label>
-        {{textarea id="content" value=answer.content}}
-      </div>
-      <button {{action 'updateAnswer' answer}}>Save</button>
-    </form>
-{{else}}
-<div class="updates">
-  <button {{action 'updateAnswerForm'}}>Edit</button>
-  <button {{action 'delete' answer}}>Delete</button>
-</div>
+{{#if adminControl.loggedIn}}
+  {{#if updateAnswerForm}}
+    <h4>Update</h4>
+      <form>
+        <div class="form-group">
+          <label for="author">Author</label>
+          {{input id="author" value=answer.author}}
+        </div>
+        <div class="form-group">
+          <label for="content">Content</label>
+          {{textarea id="content" value=answer.content}}
+        </div>
+        <button {{action 'updateAnswer' answer}}>Save</button>
+      </form>
+  {{else}}
+  <div class="updates">
+    <button {{action 'updateAnswerForm'}}>Edit</button>
+    <button {{action 'delete' answer}}>Delete</button>
+  </div>
+  {{/if}}
 {{/if}}
