@@ -9,8 +9,10 @@
 <br>
 <hr>
 <div class="lists scrollable">
-  {{#each model.answers as |answer|}}
+
+  {{answer-list answers = model.answers destroyAnswer='destroyAnswer' updateAnswer='updateAnswer' vote='vote'}}
+  <!-- {{#each model.answers as |answer|}}
     {{answer-tile answer=answer destroyAnswer='destroyAnswer' updateAnswer='updateAnswer' vote='vote'}}
-  {{/each}}
+  {{/each}} -->
   {{new-answer question=model saveAnswer='saveAnswer'}}
 </div>
