@@ -173,3 +173,13 @@ button:active {
   }
   border: outset 2px lighten($schemecolor1,25%);
 }
+
+.admin-login-form {
+  position: relative;
+  padding: 15px;
+  border: inset 5px $schemecolor5;
+  background-color: $schemecolor5;
+  min-height: 500px;
+  border-bottom: inset 5px darken($schemecolor5, 5%);
+  border-right: inset 5px darken($schemecolor5, 5%);
+}
