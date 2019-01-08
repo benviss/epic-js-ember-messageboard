@@ -23,7 +23,7 @@ You will need the following things properly installed on your computer. Admin us
 -users can ask questions and provide name: "What is a orange", "Ben";
   -questions can be edited: "What is an orange?";
 -users can answer questions and provide name: "A fruit", "Matt";
-  -users can edit answers: "A fruit, idiot.";
+  -users can edit answers: "A fruit.";
   -users can vote up and vote down answers: "Matt answer voted down" Votes: -1;
 -users can mark a questions as answered: true; "Question has been solved"
 -user can log in as admin to gain admin features;
